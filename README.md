@@ -3,17 +3,13 @@ Aplicatia este destinata librariilor si bibliotecilor prin care se pot imprumuta
 
 Aplicatia este formata clasa ObjectClass care este clasa de BAZA pentru toate clasele aplicatiei din pachetul DOMAIN. Avem o clasa Users care este clasa de baza pentru clasele Client,Admin,Eployee si care la randul ei este clasa parinte pentru ObjectClass
 
-ObjectClass ---- Users ---- Client
-            |          |
-            |          ---- Employee
-            |          |
-            |          ---- Admin
-            |
-            ---- Author
-            |
-            ---- Publisher
-            |
-            ---- Book
+ObjectClass -> Users -> Client, Employee, Admin
+            
+ObjectClass -> Author
+            
+ObjectClass -> Publisher
+            
+ObjectClass -> Book
  
 Aplicatia foloseste mult conceptul de POLIMORFISM, mai ales la crearea claselor din pachetul DOMAIN. Avem si clasere Repository care este unul generic si bineinteles un service. Aplicatia are ca functionalitati CRUD-uri pentru toate clasele, modalitatea de imprumut a unei cartisi vizualizarea unor statistici importante.
 Aplicatia are si o interfata grafica. La pornirea acesteia ne putem loga sau inregistra, iar in functie de username, vom fi CLIENTI, sau ANGAJATI, sau ADMINISTRATORI, astfel 3 ferestre diferite se vor putea deschide.
